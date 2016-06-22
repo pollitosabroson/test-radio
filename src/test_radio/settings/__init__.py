@@ -35,6 +35,12 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions',
+    'rest_framework',
+    'test_radio.api',
+    'test_radio.performers',
+    'test_radio.songs',
+    'test_radio.station',
+    'test_radio.plays',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -50,6 +56,16 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'test_radio.urls'
 
 WSGI_APPLICATION = 'test_radio.wsgi.application'
+
+# Database
+# https://docs.djangoproject.com/en/1.7/ref/settings/#databases
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'test_radio',
+        'USER': 'vagrant'
+    }
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
